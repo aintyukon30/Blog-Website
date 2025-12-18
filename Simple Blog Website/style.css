@@ -1,0 +1,310 @@
+:root {
+    --header: #112031;
+    --nav: #181C14;
+    --button: #697565;
+    --button-hover: #B2BEAE;
+    --font-color: #333;
+    --font-color1: #920000;
+    --background-color: #f4f4f4;
+    --navbtn: #635985;
+    --navbtn-hover: #393053;
+    --background-image: url("img/Background.jpeg");
+    --background-image-2: url("img/background_2.jpeg")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: var(--nav);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.head-title {
+    font-family: "BakBak One";
+    color: #fff;
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.genre-btn {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: var(--button);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.genre-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.genre-btn:active {
+    background-color: var(--navbtn);
+}
+
+.main {
+    width: 100%;
+    background: 
+        linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%),
+        var(--background-image);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+
+    height: 109vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+}
+
+
+.greet {
+    font-family: "BakBak One";
+    color: #fff;
+    text-align: left;
+    font-size: 45px;
+}
+
+.content {
+    color: #fff;
+    text-align: left;
+    margin: 20px 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.read-more-btn {
+    padding: 10px 20px;
+    background-color: var(--button);
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 120px 20px 60px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .greet {
+    font-size: 32px;
+  }
+
+  .content {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+
+/* ABOUT SECTION */
+.about {
+    width: 100%;
+    background: 
+        linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%),
+        var(--background-image-2);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 109vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+}
+
+/* ABOUT LAYOUT */
+.about {
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%),
+    var(--background-image-2);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 109vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image {
+  margin-top: 40px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media (max-width: 900px) {
+  .about {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .about-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-image {
+    transform: none;
+    margin-top: 20px;
+  }
+}
+
+.music-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    max-width: 750px;
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-title {
+    font-size: 36px;
+    color: var(--font-color1);
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #222;
+}
+
+/* GENRE SECTION */
+.genre {
+    padding: 100px 60px;
+    background-color: #f4f4f4;
+}
+
+.header-title {
+    text-align: center;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.music-title {
+    text-align: center;
+    font-size: 36px;
+    color: #920000;
+    margin-bottom: 40px;
+}
+
+/* CARD GRID */
+.music-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.music-card {
+  position: relative;
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 280px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark overlay */
+.music-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+}
+
+/* Keep text above overlay */
+.music-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.music-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+  .music-title {
+    font-size: 28px;
+  }
+
+  .music-card {
+    min-height: 240px;
+    padding: 20px;
+  }
+}
+
+
