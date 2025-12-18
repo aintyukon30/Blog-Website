@@ -18,12 +18,29 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 nav {
     width: 100%;
-    height: 80px;
+  min-height: 80px;
     background-color: var(--nav);
     display: flex;
     align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,18 +53,19 @@ nav {
     font-size: 24px;
     margin-left: 20px;
     cursor: pointer;
+  text-decoration: none;
 }
 
 .buttons {
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
 }
 
 .genre-btn {
-    margin-left: auto;
-    margin-right: 20px;
+  margin: 0;
     padding: 10px 20px;
     background-color: var(--button);
     color: #fff;
@@ -120,6 +138,7 @@ nav {
     align-items: center;
     text-align: center;
     height: auto;
+    background-attachment: scroll;
   }
 
   .greet {
@@ -132,27 +151,25 @@ nav {
   }
 }
 
+@media (max-width: 700px) {
+  body {
+    padding-top: 130px;
+  }
 
-/* ABOUT SECTION */
-.about {
+  .head-title {
     width: 100%;
-    background: 
-        linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%),
-        var(--background-image-2);
+    text-align: center;
+    margin-left: 0;
+  }
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    height: 109vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 80px;
+  .genre-btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
 }
 
+
+/* ABOUT SECTION */
 /* ABOUT LAYOUT */
 .about {
   width: 100%;
@@ -172,12 +189,22 @@ nav {
   display: flex;
   align-items: center;
   gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-image {
   margin-top: 40px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.about-image img {
+  width: 420px;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -204,12 +231,6 @@ nav {
     transform: none;
     margin-top: 20px;
   }
-}
-
-.music-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
 }
 
 .about-card {
@@ -239,6 +260,12 @@ nav {
     background-color: #f4f4f4;
 }
 
+@media (max-width: 900px) {
+  .genre {
+    padding: 80px 20px;
+  }
+}
+
 .header-title {
     text-align: center;
     color: #777;
@@ -256,7 +283,7 @@ nav {
 /* CARD GRID */
 .music-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
@@ -307,4 +334,10 @@ nav {
   }
 }
 
-
+.foot {
+    background-color: var(--header);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
